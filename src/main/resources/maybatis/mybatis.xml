@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ <configuration>
+ <!-- setting配置根据需要再添加 -->
+<!-- 配置别名 -->
+
+<typeAliases>
+<typeAlias type="com.zwt.entity.User" alias="user"/>
+<typeAlias type="com.zwt.entity.Roles" alias="roles"/>
+<typeAlias type="com.zwt.entity.Modules" alias="modules"/>
+</typeAliases>
+<mappers>
+
+</mappers>
+
+</configuration>

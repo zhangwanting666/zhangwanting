@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zwt.mapper.ModulesMapper">
+<!-- 查询 -->
+<select id="getAllModules" resultType="modules">
+ select * from modules
+</select>
+<select id="getAllModulesbyid" resultType="modules">
+ select * from modules where Id=#{id}
+</select>
+<!-- 修改 -->
+<update id="updateModulesById">
+ update modules set Name = #{Name},ParentId=#{ParentId},Path=#{Path},Weight=#{Weight} where Id=#{Id}
+</update>
+<!-- 删除 -->
+<delete id="deleteModulesById">
+DELETE FROM modules where Id=#{id}
+</delete>
+<!-- 添加 -->
+<insert id="addModules">
+  insert into modules (Name,Parentid,Path,Weight) values(#{Name},#{ParentId},#{Path},#{Weight})
+</insert>
+
+</mapper>
